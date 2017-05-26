@@ -20,8 +20,8 @@ class Stream extends Component {
         SnapkiteStreamClient.destroyStream();
     }
 
-    handleNewTweet(tweet) {
-        this.state = {tweet: tweet };
+    handleNewTweet(newTweet) {
+        this.setState({ tweet: newTweet});
     }
 
     render() {
@@ -29,6 +29,7 @@ class Stream extends Component {
 
         if (tweet) {
             return (
+
                 <StreamTweet
                     tweet={tweet}
                     onAddTweetToCollection={this.props.onAddTweetToCollection} />

@@ -21,9 +21,10 @@ class Collection extends Component {
         );
 
         var htmlMarkup = {
+            title:"Title",
             html: htmlString
         };
-
+        console.log(JSON.stringify(htmlMarkup));
         return JSON.stringify(htmlMarkup);
     }
 

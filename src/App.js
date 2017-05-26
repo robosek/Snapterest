@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   changeCollectionTweetsCollection(newCollectionTweets) {
-    this.state({ collectionTweets: newCollectionTweets });
+    this.setState({ collectionTweets: newCollectionTweets });
   }
 
 
@@ -46,7 +46,7 @@ class App extends Component {
           <h2>Snapterest</h2>
         </div>
         <br />
-        <div className="container-fluid">
+        <div className="container">
           <div className="row">
             <div className="col-md-4 text-center">
               <Stream onAddTweetToCollection={this.addTweetToCollection} />

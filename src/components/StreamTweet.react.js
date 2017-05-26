@@ -32,9 +32,9 @@ class StreamTweet extends Component {
         var isNumberOfCharactersIncreasing = (nextTweetLength > currentTweetLength);
         var headerText;
 
-        this.setState = {
+        this.setState({
             numberOfCharactersIsIncreasing: isNumberOfCharactersIncreasing
-        };
+        });
 
         if (isNumberOfCharactersIncreasing) {
             headerText = 'Number of characters is increasing';
@@ -49,7 +49,7 @@ class StreamTweet extends Component {
         window.snapterest.numberOfReceivedTweets++;
     }
 
-    componentDidUpdate(prevProps, nextProps){
+    componentDidUpdate(prevProps, nextProps) {
         window.snapterest.numberOfDisplayedTweets++;
     }
 
@@ -60,6 +60,7 @@ class StreamTweet extends Component {
                 <Tweet
                     tweet={this.props.tweet}
                     onImageClick={this.props.onAddTweetToCollection} />
+                <Header text={this.props.tweet.text} />
             </section>);
     }
 }
